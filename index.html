@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS-->
+    <link rel="stylesheet" href="style.css">
+    <title>ECOMMERCE</title>
+</head>
+
+<body>
+    <header class="container-fluid position-sticky top-0 bg-dark text-white">
+        <ul class="nav nav-pills mb-3 py-3 container" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">Inicio</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Productos</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                    type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Carrito</a>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <h2 class="h4 m-4 text-primary">Inicio</h2>
+            <h1 id="t.inicio">Gadgets Tecnologicos</h1>
+            <img src="imagenes/Gadget.jpg" style="width: 30%;" class="card-img-top" alt="...">
+        </div>
+
+
+        <div class="row" id="items"></div>
+
+        <template id="template-card">
+            <div class="card">
+                <h5></h5>
+                <img id="image" src="" alt="" class="img-thumbnail my-4"></img>
+            </div>
+        </template>
+
+
+
+         <div class="tab-pane fade show active container" id="pills-profile" role="tabpanel"
+            aria-labelledby="pills-profile-tab">
+            <h2 class="h4 m-4 text-primary text-center">Producto</h2>
+
+        
+            <div 
+                class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4" id="cards">
+            </div>
+        </div>
+
+        <br>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <h2 class="h4 m-4 text-primary">Carrito</h2>
+
+            <table class="table table-striped table-dark container  ">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Sub Total</th>
+                    </tr>
+                </thead>
+
+       
+                <body>
+
+                    <tr>
+                        <th scope="row">1</th>
+                        <td class="table__productos">
+                            <img src="./imagenes/Altavoz.jpg" alt="">
+                            <h6 class="title">Altavoz Sumergible JBL</h6>
+                        </td>
+                        <td class="table__price">
+                            <p>$15.990</p>
+                        </td>
+                        <td class="table__cantidad">
+                            <input type="number" min="1" value="1" class="input__elemento">
+                            <button class="delete btn btn-danger">x</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">2</th>
+                        <td class="table__productos">
+                            <img src="./imagenes/aceite2.jpg" alt="">
+                            <h6 class="title">Aceite2</h6>
+                        </td>
+                        <td class="table__price">
+                            <p>$17.740</p>
+                        </td>
+                        <td class="table__cantidad">
+                            <input type="number" min="1" value="1" class="input__elemento">
+                            <button class="delete btn btn-danger">x</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">3</th>
+                        <td class="table__productos">
+                            <img src="./imagenes/arroz1.jpg" alt="">
+                            <h6 class="title">Arroz</h6>
+                        </td>
+                        <td class="table__price">
+                            <p>$9.500</p>
+                        </td>
+                        <td class="table__cantidad">
+                            <input type="number" min="1" value="1" class="input__elemento">
+                            <button class="delete btn btn-danger">x</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">4</th>
+                        <td class="table__productos">
+                            <img src="./imagenes/Jabon-Antibacterial-El-Sol-5L-768x1024.jpg" alt="">
+                            <h6 class="title">Jabon Antibacterial</h6>
+                        </td>
+                        <td class="table__price">
+                            <p>$7.106</p>
+                        </td>
+                        <td class="table__cantidad">
+                            <input type="number" min="1" value="1" class="input__elemento">
+                            <button class="delete btn btn-danger">x</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">5</th>
+                        <td class="table__productos">
+                            <img src="./imagenes/jabon3.jpg" alt="">
+                            <h6 class="title">Jabon Liquido</h6>
+                        </td>
+                        <td class="table__price">
+                            <p>$6.332</p>
+                        </td>
+                        <td class="table__cantidad">
+                            <input type="number" min="1" value="1" class="input__elemento">
+                            <button class="delete btn btn-danger">x</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">6</th>
+                        <td class="table__productos">
+                            <img src="./imagenes/Yogurt.jpg" alt="">
+                            <h6 class="title">Yogurt</h6>
+                        </td>
+                        <td class="table__price">
+                            <p>$1.450</p>
+                        </td>
+                        <td class="table__cantidad">
+                            <input type="number" min="1" value="1" class="input__elemento">
+                            <button class="delete btn btn-danger">x</button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <th scope="row">7</th>
+                        <td class="table__productos">
+                            <img src="./imagenes/Leche.jpg" alt="">
+                            <h6 class="title">Leche</h6>
+                        </td>
+                        <td class="table__price">
+                            <p>$4.529</p>
+                        </td>
+                        <td class="table__cantidad">
+                            <input type="number" min="1" value="1" class="input__elemento">
+                            <button class="delete btn btn-danger">x</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">8</th>
+                        <td class="table__productos">
+                            <img src="./imagenes/Frijol.jpg" alt="">
+                            <h6 class="title">Frijol</h6>
+                        </td>
+                        <td class="table__price">
+                            <p>$4.000</p>
+                        </td>
+                        <td class="table__cantidad">
+                            <input type="number" min="1" value="1" class="input__elemento">
+                            <button class="delete btn btn-danger">x</button>
+                        </td>
+                    </tr>
+
+
+
+                    <div class="contenedor-Formulario">
+                        <div class="content">
+            
+                            <form action="" class="form" id="form" onsubmit="">
+                                <!--functionSubmit(event)-->
+                                <h2>Informacion de Pago</h2>
+                                <input id="inputName" type="text" placeholder="Name" required><br><br>
+                                <input id="email" type="Email" name="email" placeholder="email" required><br><br>
+                                <input id="Tarjeta No." type="text" name="Tarjeta No." placeholder="Tarjeta No." required><br><br>
+                                <input id="F.Vencimiento MM/AA" type="text" name="F.Vencimiento MM/AA" placeholder="F.Vencimiento MM/AA" required><br><br>
+                                <select name="gender" id="gender" value="Gender">
+                                    <option value="0">Gender</option>
+                                    <option value="F">Female</option>
+                                    <option value="M">Male</option>
+                                    <option value="O">Other</option>
+                                </select>
+                                <input type="submit" value="Submit">
+                            </form>
+                        </div>
+                    </div>
+                </main>
+
+
+                </body>
+            </table>
+            <br>
+            <br>
+
+            <div class="row mx-4">
+                <div class="col">
+                    <h3 class="text-white">Total: 0</h3>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <button class="btn btn-success">COMPRAR</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <footer class="bg-dark p-3 mt-5">
+        <p class="text-center m-0 text-muted">TM - 2021</p>
+    </footer>
+
+    <!-- Bootstrap script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>
